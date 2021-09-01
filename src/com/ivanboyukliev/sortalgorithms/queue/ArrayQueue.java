@@ -28,7 +28,6 @@ public class ArrayQueue {
             front = 0;
             back = numItems;
         }
-
         queue[back] = employee;
         // Circular queue implementation
         if (back < queue.length - 1) {
@@ -51,7 +50,6 @@ public class ArrayQueue {
         } else if (front == queue.length) {
             front = 0;
         }
-
         return employee;
     }
 
@@ -71,7 +69,6 @@ public class ArrayQueue {
     }
 
     public void printQueue() {
-
         if (front <= back) {
             for (int i = front; i < back; i++) {
                 System.out.println(queue[i]);
