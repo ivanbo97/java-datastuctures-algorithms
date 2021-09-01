@@ -1,0 +1,1 @@
+Methods of the vector interface are synchronized and thread safe unlike those of ArrayList class.
