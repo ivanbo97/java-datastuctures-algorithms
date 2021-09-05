@@ -13,8 +13,10 @@ public class Main {
         hashTable.put("Wilson",new Employee("David","Wilson",455));
         hashTable.put("End",new Employee("Bill","End",54));
 
+        hashTable.remove("End");
+        hashTable.remove("Wilson");
         hashTable.printHashTable();
 
-        System.out.println(hashTable.get("Miller"));
+        //System.out.println(hashTable.get("Wilson"));
     }
 }
