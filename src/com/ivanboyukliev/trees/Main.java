@@ -16,5 +16,8 @@ public class Main {
         tree.traverseInorder();
 
         System.out.println(tree.get(30));
+
+        System.out.println("Max tree value = " + tree.max());
+        System.out.println("Min tree value = " + tree.min());
     }
 }
