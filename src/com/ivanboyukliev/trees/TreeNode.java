@@ -5,6 +5,11 @@ public class TreeNode {
     private TreeNode leftChild;
     private TreeNode rightChild;
 
+
+    public TreeNode(int data) {
+        this.data = data;
+    }
+
     public void insert(int value) {
         if (value == data) {
             return;
@@ -24,19 +29,29 @@ public class TreeNode {
         }
     }
 
-    public void traverseInorder(){
-        if(leftChild != null){
+    public void traverseInorder() {
+        if (leftChild != null) {
             leftChild.traverseInorder();
         }
-        System.out.print( data + ",");
-        if(rightChild != null){
+        System.out.print(data + ",");
+        if (rightChild != null) {
             rightChild.traverseInorder();
         }
     }
 
-    public TreeNode(int data) {
-        this.data = data;
+    public TreeNode get(int value) {
+        if (data == value) {
+            return this;
+        }
+        if (data < value && rightChild != null) {
+            return rightChild.get(value);
+        }
+        if (data > value && leftChild != null) {
+            return leftChild.get(value);
+        }
+        return null;
     }
+
 
     public int getData() {
         return data;
