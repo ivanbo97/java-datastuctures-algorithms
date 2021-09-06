@@ -59,7 +59,12 @@ public class TreeNode {
         return leftChild.min();
     }
 
-
+    public int max(){
+        if(rightChild == null){
+            return data;
+        }
+        return rightChild.max();
+    }
     public int getData() {
         return data;
     }
