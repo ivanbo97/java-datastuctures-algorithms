@@ -15,6 +15,8 @@ public class Main {
         tree.insert(17);
 
         tree.traverseInorder();
+        System.out.println("Preorder traversal:");
+        tree.traversePreorder();
 
 //        System.out.println(tree.get(30));
 //
