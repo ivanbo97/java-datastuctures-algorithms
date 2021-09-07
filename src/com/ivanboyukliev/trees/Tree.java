@@ -17,6 +17,12 @@ public class Tree {
         }
     }
 
+    public void traversePreorder() {
+        if (root != null) {
+            root.traversePreorder();
+        }
+    }
+
     public TreeNode get(int value) {
         if (root != null) {
             return root.get(value);
@@ -65,7 +71,7 @@ public class Tree {
             subtreeRoot.setData(subtreeRoot.getRightChild().min());
 
             // Delete the node that has the smallest value in the right subtree
-            subtreeRoot.setRightChild(delete(subtreeRoot.getRightChild(),subtreeRoot.getData()));
+            subtreeRoot.setRightChild(delete(subtreeRoot.getRightChild(), subtreeRoot.getData()));
         }
 
         return subtreeRoot;
