@@ -16,7 +16,11 @@ public class Main {
 //        heap.delete(0);
 
         heap.printHeap();
-        System.out.println(heap.peek());
+        //        System.out.println(heap.peek());
+
+        // After sorting the array we no longer have a heap
+        heap.sort();
+        heap.printHeap();
 
     }
 }
