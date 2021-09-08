@@ -14,12 +14,12 @@ public class Main {
         pQueue.add(-3492);
         pQueue.add(429);
 
-//        System.out.println(pQueue.peek());
-//        System.out.println(pQueue.remove());
-//        System.out.println(pQueue.peek());
-//
-//        System.out.println(pQueue.poll());
-//        System.out.println(pQueue.peek());
+        System.out.println(pQueue.peek());
+        System.out.println(pQueue.remove());
+        System.out.println(pQueue.peek());
+
+        System.out.println(pQueue.poll());
+        System.out.println(pQueue.peek());
          Object[] ints = pQueue.toArray();
         for(Object num : ints){
             System.out.println(num);
