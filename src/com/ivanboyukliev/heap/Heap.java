@@ -77,9 +77,14 @@ public class Heap {
             } else {
                 break;
             }
-
-
         }
+    }
+
+    public int peek(){
+        if(isEmpty()){
+            throw new IndexOutOfBoundsException("Heap is empty.");
+        }
+        return heap[0];
     }
 
     public boolean isFull() {
