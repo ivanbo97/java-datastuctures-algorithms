@@ -36,6 +36,16 @@ public class Heap {
         return deletedVal;
     }
 
+    public void sort() {
+        int lastHeapIdx = size - 1;
+        for (int i = 0; i < lastHeapIdx; i++) {
+            int tmp = heap[0];
+            heap[0] = heap[lastHeapIdx - i];
+            heap[lastHeapIdx - i] = tmp;
+            fixHeapBelow(0, lastHeapIdx - i - 1);
+        }
+    }
+
     public void printHeap() {
         for (int i = 0; i < size; i++) {
             System.out.print(heap[i]);
@@ -80,8 +90,8 @@ public class Heap {
         }
     }
 
-    public int peek(){
-        if(isEmpty()){
+    public int peek() {
+        if (isEmpty()) {
             throw new IndexOutOfBoundsException("Heap is empty.");
         }
         return heap[0];
